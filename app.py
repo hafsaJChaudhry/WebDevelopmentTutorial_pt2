@@ -44,40 +44,7 @@ def apply_to_job(id):
   add_application_to_db(id, data)
   
   return render_template('application_submitted.html', application=data, role=job)
-  '''
-  if request.method == 'GET':
-    # Handle GET request (if needed)
-    job = load_job_from_db(id)
-    if job:
-      print("Rendering apply_form.html for GET request")
-      return render_template('apply_form.html', job=job)
-    else:
-      print("Job not found")
-      return "Job not found", 404
-  else:
-    data = request.form
-    job = load_job_from_db(id)
-    add_application_to_db(id, data)
-    print("Application submitted successfully")
-    return render_template('application_submitted.html', application=data, job=job)
-  '''
-  '''
-  if request.method == 'POST':
-    data = request.form
-    job = load_job_from_db(id)
-    add_application_to_db(id, data)
-    print("Application submitted successfully")
-    return render_template('application_submitted.html', application=data, job=job)
-  else:
-     # Handle GET request (if needed)
-    job = load_job_from_db(id)
-    if job:
-      print("Rendering apply_form.html for GET request")
-      return render_template('apply_form.html', job=job)
-    else:
-      print("Job not found")
-      return "Job not found", 404
-    '''
+
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)
