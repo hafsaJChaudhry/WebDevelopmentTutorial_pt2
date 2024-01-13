@@ -2,7 +2,8 @@ from sqlalchemy import create_engine, text
 from flask import request
 import os
 
-db_connection = "mysql+pymysql://dpdjqe2u2whcnfx93ltx:pscale_pw_tuQpyby6RG3kxnJPfacmj2rMf02SyO0fOlDdJ4MOZcW@aws.connect.psdb.cloud/hafsacareers?charset=utf8mb4"
+#below has been changed for github, you need to insert your information that was given by your AWS Cloud (ex: planetscale) or MySQL server
+db_connection = "mysql+pymysql://<username>:<password>@<host>/<dbname>?charset=utf8mb4"
 
 #connect to our mysql database
 engine = create_engine(db_connection,
